@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="birthday-section">
+        <h1 id="Letter">Guess whose birthday it is today??</h1>
+        <div id="cake-container">
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+            <img id="cake" src="birthday cake.png" alt="เค้กวันเกิด">
+        </div>
+        <audio id="birthday-song" src="HappyBirthdaySong.mp3" loop></audio>
+        <div id="wish-container">
+            <input class="input" type="text" id="wish-input" placeholder="&nbsp;&nbsp;ใส่คำอธิษฐานของคุณ">
+            <button class="input2" id="submit-wish">เป่าเลย!</button>
+        </div>
+    </div>
+
+    <div id="party-section" class="hidden">
+        <img id="cakeatparty" class="hidden-image" src="birthday cake.png" alt="เค้กวันเกิด">
+        <img id="Happybrithdaytext" class="hidden-image" src="happybirthdaytext.png">
+        <img id="Effect" class="hidden-image" src="effect.png">
+        <img id="Effect2" class="hidden-image" src="effect.png">
+        <img id="Papernote" class="hidden-image" src="papernote.png">
+        <p id="birthdaytext" class="hidden-image">แก่ขึ้นอีกปีแล้วนะ วันเกิดปีนี้ก็ขอให้เป็นปีที่ดีสำหรับคุณ มีความสุขในสิ่งเล็ก ๆ ทุกวัน กินอิ่ม นอนหลับ ขออะไรไว้ก็ให้เป็นจริงอย่างที่หวัง ชีวิตราบรื่นไม่มีเหตุการณ์ร้าย ๆ เข้ามา และสุดท้ายนี้ สุขสันต์วันเกิด!! มีความสุขมาก ๆ</p>
+        <img class="backgroundparty" src="background-with-birthday-theme-vector-removebg-preview.png">
+        <img class="backgroundparty2" src="background-with-birthday-theme-vector-removebg-preview.png">
+        <img class="backgroundparty3" src="background-with-birthday-theme-vector-removebg-preview.png">
+        <p class="wishdisplay"  id="wish-display"></p>
+        <div id="balloons"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

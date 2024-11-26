@@ -1,0 +1,226 @@
+/* style.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#birthday-section {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#Letter {
+    position: relative;
+    bottom: 120px;
+    font: 3em Cursive;
+}
+
+/* โครงสร้างเทียน */
+.candle {
+    position: relative;
+    width: 10px; /* ขนาดเริ่มต้นเล็ก */
+    height: 40px; /* ขนาดเริ่มต้นเล็ก */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(0); /* เริ่มต้นซ่อน */
+    transition: transform 2s ease;
+}
+
+/* ส่วนเปลวไฟ */
+.flame {
+    position: absolute;
+    top: -20px;
+    left: 150px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #ffcc00 30%, rgba(255, 204, 0, 0) 100%);
+    border-radius: 50%;
+    transform: translateX(-50%) scale(0); /* เริ่มต้นเล็ก */
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+    animation: flicker 5s infinite;
+    transition: transform 2s ease;
+}
+
+
+
+/* การแอนิเมชันเปลวไฟ */
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateX(-48%) scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-50%) scale(1);
+        opacity: 0.9;
+    }
+}
+
+#cake-container img {
+    width: 0;
+    opacity: 0;
+    transition: all 2s ease;
+    filter: brightness(0.6);
+}
+
+#wish-container {
+    margin-top: 20px;
+    position: relative;
+    top: 100px;
+}
+
+.input {
+    width: 300px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.input2 {
+    width: 100px;
+    height: 45px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+/* ซ่อนส่วนต่าง ๆ */
+.hidden {
+    display: none;
+}
+
+#party-section {
+    display: none; /* เริ่มต้นซ่อน */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffccff;
+    text-align: center;
+    color: #000;
+    
+}
+
+.hidden-image {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* แสดงรูปภาพพร้อมอนิเมชัน */
+.show-image {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#Happybrithdaytext {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    top: 50px;
+    z-index: 1;
+}
+
+#Effect {
+    position: absolute;
+    width: 1000px;
+    left: -200px;
+}
+
+#Effect2 {
+    position: absolute;
+    width: 1000px;
+    right: -200px;
+}
+
+#cakeatparty {
+    position: absolute;
+    width: 330px;
+    height: auto;
+    top: 325px;
+    z-index: 1;
+}
+
+#Papernote {
+    position: absolute;
+    left: 30px;
+    top: 150px;
+    z-index: 1;
+}
+
+#birthdaytext {
+    z-index: 2;
+    width: 317px;
+    position: absolute;
+    top: 315px;
+    left: 100px;
+    font-size: 20px;
+}
+
+.backgroundparty {
+    position: absolute;
+    top: -75px;
+    z-index: 2;
+}
+
+.backgroundparty2 {
+    position: absolute;
+    top: -75px;
+    left: -95px;
+}
+
+.backgroundparty3 {
+    position: absolute;
+    top: -75px;
+    right: -95px;
+ 
+}
+
+.wishdisplay {
+    position: relative;
+    bottom: -325px;
+    font-size: 30px;
+    z-index: 1;
+    font-family: Papyrus, Fantasy;
+    border-style: none;
+    width: auto;
+    height: auto;
+    background-color: white;
+}
+
+/* ลูกโป่ง */
+.balloon {
+    width: 100px;
+    height: 120px;
+    position: absolute;
+    bottom: -100px;
+    border-radius: 50%;
+    animation: float 7s linear infinite;
+}
+
+.string {
+    width: 2px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    bottom: -100px;
+    left: 50px;
+    border-radius: cubic-bezier(0,.96,1,-0.01);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-110vh);
+    }
+}
+
